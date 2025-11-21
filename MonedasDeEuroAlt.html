@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mi colección de monedas de euro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 1em;
+      max-width: 900px;
+      margin: auto;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    /* Estilo para cada grupo desplegable */
+    details.coin-group {
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: white;
+      overflow: hidden;
+    }
+
+    details.coin-group > summary {
+      padding: 0.75em 1em;
+      cursor: pointer;
+      font-size: 1.1em;
+      font-weight: bold;
+      background-color: #e0e0e0;
+      user-select: none;
+    }
+
+    /* Opcional: cambiar apariencia cuando está abierto */
+    details.coin-group[open] > summary {
+      background-color: #d0d0d0;
+    }
+
+    .coin-list {
+      padding: 0.5em 1em 1em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    .coin {
+      width: 100px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    .coin img {
+      max-width: 100%;
+      height: auto;
+      transition: opacity 0.3s, transform 0.3s;
+      display: block;
+      margin: 0 auto 0.3em;
+    }
+
+    /* monedas que no tienes */
+    .not-have img {
+      opacity: 0.3;
+      transform: scale(0.9);
+    }
+
+    /* monedas que tienes */
+    .have img {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* añadir un borde o marca visual si quieres */
+    .have {
+      border: 2px solid green;
+      border-radius: 4px;
+      padding: 0.2em;
+    }
+
+    .not-have {
+      border: 2px dashed #999;
+      border-radius: 4px;
+      padding: 0.2em;
+    }
+
+    /* leyenda o pie de página para explicar el significado */
+    .legend {
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mi colección de monedas de euro</h1>
+
+  <!-- Ejemplo para España -->
+  <details class="coin-group">
+    <summary>España</summary>
+    <div class="coin-list">
+      <div class="coin not-have">
+        <img src="Normales/Espana_serie1_cent_1.png" alt="1 céntimo España">
+        <div>1 céntimo</div>
+      </div>
+      <div class="coin have">
+        <img src="Normales/Espana_serie1_cent_2.png" alt="2 céntimos España">
+        <div>2 céntimos</div>
+      </div>
+      <div class="coin not-have">
+        <img src="Normales/Espana_serie1_cent_5.png" alt="5 céntimos España">
+        <div>5 céntimos</div>
+      </div>
+      <div class="coin not-have">
+        <img src="img/es_10c.jpg" alt="10 céntimos España">
+        <div>10 céntimos</div>
+      </div>
+      <div class="coin have">
+        <img src="img/es_20c.jpg" alt="20 céntimos España">
+        <div>20 céntimos</div>
+      </div>
+      <div class="coin not-have">
+        <img src="img/es_50c.jpg" alt="50 céntimos España">
+        <div>50 céntimos</div>
+      </div>
+      <div class="coin not-have">
+        <img src="img/es_1e.jpg" alt="1 euro España">
+        <div>1 euro</div>
+      </div>
+      <div class="coin have">
+        <img src="img/es_2e.jpg" alt="2 euros España">
+        <div>2 euros</div>
+      </div>
+    </div>
+  </details>
+
+  <!-- Ejemplo para Alemania -->
+  <details class="coin-group">
+    <summary>Alemania</summary>
+    <div class="coin-list">
+      <div class="coin have">
+        <img src="img/de_1c.jpg" alt="1 céntimo Alemania">
+        <div>1 céntimo</div>
+      </div>
+      <div class="coin not-have">
+        <img src="img/de_2c.jpg" alt="2 céntimos Alemania">
+        <div>2 céntimos</div>
+      </div>
+      <div class="coin not-have">
+        <img src="img/de_5c.jpg" alt="5 céntimos Alemania">
+        <div>5 céntimos</div>
+      </div>
+      <div class="coin have">
+        <img src="img/de_10c.jpg" alt="10 céntimos Alemania">
+        <div>10 céntimos</div>
+      </div>
+      <div class="coin not-have">
+        <img src="img/de_20c.jpg" alt="20 céntimos Alemania">
+        <div>20 céntimos</div>
+      </div>
+      <div class="coin have">
+        <img src="img/de_50c.jpg" alt="50 céntimos Alemania">
+        <div>50 céntimos</div>
+      </div>
+      <div class="coin not-have">
+        <img src="img/de_1e.jpg" alt="1 euro Alemania">
+        <div>1 euro</div>
+      </div>
+      <div class="coin have">
+        <img src="img/de_2e.jpg" alt="2 euros Alemania">
+        <div>2 euros</div>
+      </div>
+    </div>
+  </details>
+
+  <!-- Agrega más países aquí... -->
+
+  <div class="legend">
+    <p><strong>Leyenda:</strong></p>
+    <ul>
+      <li><span style="opacity: 1;">Monedas con opacidad normal y borde verde:</span> ya tengo estas monedas.</li>
+      <li><span style="opacity: 0.3;">Monedas con opacidad reducida y borde punteado:</span> no tengo estas monedas aún.</li>
+    </ul>
+  </div>
+
+</body>
+</html>
